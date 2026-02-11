@@ -75,7 +75,7 @@ header {
 #user-area {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vw;
     min-height: 300px;
     flex-wrap: wrap;
 }
@@ -87,18 +87,19 @@ header {
     box-shadow: 0 0px 8px hsla(0, 0%, 0%, 0.20);
     padding: 25px;
     min-width: 300px;
-    max-width: 500px;
+    max-width: 650px;
     flex-grow: 1;
 }
 
 #code {
+    white-space: pre;
+    font-family: monospace;
     background-color: hsl(0, 0%, 95%);
     border-radius: 25px;
     margin: 6px;
     box-shadow: 0 0px 8px hsla(0, 0%, 0%, 0.20);
     padding: 25px;
     min-width: 300px;
-    max-width: 500px;
-    overflow-x: scroll;
+    overflow-x: auto;
     flex-grow: 1;
 }
