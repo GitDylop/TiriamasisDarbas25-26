@@ -1,0 +1,68 @@
+
+    {
+        "basicTasks": [
+            {
+                "id":"btUzd1",
+                "name":"Užduotis 1",
+                "task":"Parašykite programą, kuri apskaičiuotų, kiek popieriaus lapų k reikės norint nukopijuoti konspektą visos klasės mokiniams. Žinoma, kad klasėje yra m mokinių, o konspektą sudaro n lapų.",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": ""
+            },
+            {
+                "id":"btUzd2",
+                "name":"Užduotis 2",
+                "task":"Paros laiką galima išmatuoti valandomis ir minutėmis atskirai. Kiekvienas vienetas per parą turi atitinkamą kiekį. Nustatykite, kiek minučių ir valandų turi p parų.",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": ""
+            },
+            {
+                "id":"btUzd3",
+                "name":"Užduotis 3",
+                "task":"Šiandien Tautvydas švenčia gimtadienį. Jam sukanka m metų. Parašykite programą, kuri apskaičiuotų, kiek mėnesių, dienų ir valandų Tautvydas jau gyvena. Tarkime kad metai turi 365 dienas.",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": ""
+            },
+            {
+                "id":"btUzd4",
+                "name":"Užduotis 4",
+                "task":"Parašykite programą, kuri apskaičiuotų y = x^2+2 reikšmę, kai duotas x.",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": ""
+            },
+            {
+                "id":"btUzd5",
+                "name":"Užduotis 5",
+                "task":"Už m kg saldainių sumokėta s eurų. Parašykite programą, kuri apskaičiuotų, kiek kainuoja 100 g. saldainių?",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": ""
+            },
+            {
+                "id":"btPaUzd1",
+                "name":"Užduotis 6",
+                "task":"Penki broliai grybaudami surengė varžybas, kuris prirink daugiau baravykų. Arūnas rado b baravykų, Audrius – 2 baravykais daugiau, Arvydas – 4 baravykais mažiau už Arūną, Vytautas – tiek pat kiek Audrius, o Gintaras – dvigubai daugiau nei Arvydas. Parašykite programą, kuri apskaičiuotų, kiek baravykų pririnko visi broliai kartu, kai žinomas skaičius b.",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": 200
+            },
+            {
+                "id":"btPaUzd2",
+                "name":"Užduotis 7",
+                "task":"Apskaičiuokite žiedo plotą, kai išorinis jos spindulys yra r1, o vidinis – r2. Žiedo plotas apskaičiuojamas pagal formulę: \n\nS = π( r1^2 - r2^2 )",
+                "tags":[],
+                "startCode":"",
+                "progress":"Nepradėta",
+                "answer": 200
+            }
+        ]
+    }

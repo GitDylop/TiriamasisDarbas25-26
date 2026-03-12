@@ -13,53 +13,14 @@
         <div id="profile-icon" class="icon"></div>
         <div id="ai-icon" class="icon"></div>
     </header>
-    <div id="task-header">
-        <div id="task-name">Masyvai</div>
-        <button id="run-btn">Vygdyti</button>
-        <button id="submit-btn">Pateikti</button>
-    </div>
-    <div id="user-area">
-        <div id="task">
-            <h3>Reikšmių perrikiavimas</h3>
-            Duota komanda:
-            <pre class="code">
-    def reiksmiu_perrikiavimas(reiksmes):
-        pass
-            </pre>
-            <p>Sąlyga:</p>
-            <ul>
-                <li><code>reiksmes</code> – sąrašas su trimis skaičiais, pvz.: [3, 7, 1]</li>
-                <li>Priskirk kiekvieną elementą kintamiesiems <code>a</code>, <code>b</code>, <code>c</code></li>
-                <li>Grąžink kintamuosius atvirkštine tvarka kaip sąrašą</li>
-                <li>Nenaudok <code>reverse()</code> ar <code>[::-1]</code></li>
-            </ul>
-            <p>Pavyzdžiai:</p>
-            <pre>[3, 7, 1] → [1, 7, 3]</pre>
-            <pre>[10, 20, 30] → [30, 20, 10]</pre>
-        </div>
-        <div id="code" contenteditable="true">
-def reiksmiu_perrikiavimas(reiksmes):
-    pass
-        </div>
+    <div id="content">
+
     </div>
 </body>
 <script>
-const codeDiv = document.getElementById('code');
-
-codeDiv.addEventListener('keydown', function(e) {
-    if (e.key === 'Tab') {
-        e.preventDefault();
-        const selection = window.getSelection();
-        const range = selection.getRangeAt(0);
-
-        const tabNode = document.createTextNode('    ');
-        range.insertNode(tabNode);
-
-        range.setStartAfter(tabNode);
-        range.setEndAfter(tabNode);
-        selection.removeAllRanges();
-        selection.addRange(range);
+    window.onload = async () => {
+        await loadTaskList();
     }
-});
 </script>
+<script src="script.js"></script>
 </html>

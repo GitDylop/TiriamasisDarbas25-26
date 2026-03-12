@@ -6,6 +6,9 @@ body {
 
 header {
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     background-color: hsl(200, 95%, 30%);
     height: 50px;
     box-shadow: 0 0px 16px hsla(0, 0%, 0%, 0.40);
@@ -102,4 +105,86 @@ header {
     min-width: 300px;
     overflow-x: auto;
     flex-grow: 1;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-item {
+    width: calc(100% - 60px);
+    max-width: 1000px;
+    height: 80px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: hsl(0, 0%, 98%);
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.20);
+    cursor: pointer;
+    transform: scale(100%);
+    transition: all 0.2s ease;
+}
+
+.list-item:hover {
+    transform: scale(101%);
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.15);
+}
+
+.list-item-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.list-item-progress {
+    top: 0;
+    right: 20px;
+    position: absolute;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.25);
+}
+
+.list-item-taglist {
+    position: absolute;
+    bottom: 20px;
+}
+
+.tag {
+    padding: 5px 10px;
+    width: max-content;
+    background-color: rgba(140, 140, 140, 0.75);
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 5px;
+
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.25);
+}
+
+.tag[color="Green"] {
+    background-color: rgba(0, 128, 0, 0.75);
+    color: white;
+}
+
+.tag[color="Yellow"] {
+    background-color: rgba(255, 220, 0, 0.75);
+    color: rgb(0, 0, 0);
+}
+
+.tag[color="Red"] {
+    background-color: rgba(220, 0, 0, 0.75);
+    color: white;
+}
+
+.tag[color="Gray"] {
+    background-color: rgba(200, 200, 200, 0.75);
+    color: rgb(0, 0, 0);
 }
