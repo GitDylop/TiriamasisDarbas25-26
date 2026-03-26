@@ -3,66 +3,197 @@
         "basicTasks": [
             {
                 "id":"btUzd1",
-                "name":"Užduotis 1",
+                "name":"Konspektų lapai",
+                "desc":"Apskaičiuokite kiek lapų reikia visiems konspektams klasei.",
                 "task":"Parašykite programą, kuri apskaičiuotų, kiek popieriaus lapų k reikės norint nukopijuoti konspektą visos klasės mokiniams. Žinoma, kad klasėje yra m mokinių, o konspektą sudaro n lapų.",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": ""
+                "startCode":"n = int(input())\nm = int(input())\n\n# Tavo kodas eina čia:\n\n",
+                "tests": [
+                    {
+                        "input": [
+                            "10",
+                            "20"
+                        ],
+                        "output": [
+                            "200"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "1",
+                            "15"
+                        ],
+                        "output": [
+                            "15"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "99",
+                            "2"
+                        ],
+                        "output": [
+                            "198"
+                        ]
+                    }
+                ]
             },
             {
                 "id":"btUzd2",
-                "name":"Užduotis 2",
+                "name":"Laiko apskaičiavimas",
+                "desc":"Apskaičiuokite parų laiką smulkesniais matais.",
                 "task":"Paros laiką galima išmatuoti valandomis ir minutėmis atskirai. Kiekvienas vienetas per parą turi atitinkamą kiekį. Nustatykite, kiek minučių ir valandų turi p parų.",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": ""
+                "startCode":"p = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Valandos: {} Minutės: {}\")",
+                "tests": [
+                    {
+                        "input": [
+                            "1"
+                        ],
+                        "output": [
+                            "Valandos: 24 Minutės: 1440"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "2"
+                        ],
+                        "output": [
+                            "Valandos: 48 Minutės: 2880"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "10"
+                        ],
+                        "output": [
+                            "Valandos: 240 Minutės: 14400"
+                        ]
+                    }
+                ]
             },
             {
                 "id":"btUzd3",
-                "name":"Užduotis 3",
+                "name":"Gimtadienis",
+                "desc":"Apskaičiuokite Tautvydo amžių mėnesiais, dienomis ir valandomis",
                 "task":"Šiandien Tautvydas švenčia gimtadienį. Jam sukanka m metų. Parašykite programą, kuri apskaičiuotų, kiek mėnesių, dienų ir valandų Tautvydas jau gyvena. Tarkime kad metai turi 365 dienas.",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": ""
+                "startCode":"m = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Mėnesiai: {} Dienos: {} Valandos: {}\")",
+                "tests": [
+                    {
+                        "input": [
+                            "16"
+                        ],
+                        "output": [
+                            "Mėnesiai: 192 Dienos: 5840 Valandos: 140160"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "1"
+                        ],
+                        "output": [
+                            "Mėnesiai: 12 Dienos: 365 Valandos: 8760"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "0"
+                        ],
+                        "output": [
+                            "Mėnesiai: 0 Dienos: 0 Valandos: 0"
+                        ]
+                    }
+                ]
             },
             {
                 "id":"btUzd4",
-                "name":"Užduotis 4",
+                "name":"Kvadratinė formulė",
+                "desc":"Raskite y reikšmę pagal x reikšmę",
                 "task":"Parašykite programą, kuri apskaičiuotų y = x^2+2 reikšmę, kai duotas x.",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": ""
+                "startCode":"x = int(input())\n\n# Tavo kodas eina čia:",
+                "tests": [
+                    {
+                        "input": [
+                            "2"
+                        ],
+                        "output": [
+                            "6"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "0"
+                        ],
+                        "output": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "-2"
+                        ],
+                        "output": [
+                            "6"
+                        ]
+                    }
+                ]
             },
             {
                 "id":"btUzd5",
-                "name":"Užduotis 5",
+                "name":"Saldainių kaina",
+                "desc":"Apskaičiuok kiek kainuoja 100 g. saldainių",
                 "task":"Už m kg saldainių sumokėta s eurų. Parašykite programą, kuri apskaičiuotų, kiek kainuoja 100 g. saldainių?",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": ""
+                "startCode":"m = double(input())\ns = double(input())\n\n# Tavo kodas eina čia:",
+                "tests": [
+                    {
+                        "input": [
+                            "2.4",
+                            "36.5"
+                        ],
+                        "output": [
+                            "1.52"
+                        ]
+                    }
+                ]
             },
             {
                 "id":"btPaUzd1",
                 "name":"Užduotis 6",
+                "desc":"",
                 "task":"Penki broliai grybaudami surengė varžybas, kuris prirink daugiau baravykų. Arūnas rado b baravykų, Audrius – 2 baravykais daugiau, Arvydas – 4 baravykais mažiau už Arūną, Vytautas – tiek pat kiek Audrius, o Gintaras – dvigubai daugiau nei Arvydas. Parašykite programą, kuri apskaičiuotų, kiek baravykų pririnko visi broliai kartu, kai žinomas skaičius b.",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": 200
+                "startCode":"p = int(input())\n\n# Tavo kodas eina čia:",
+                "tests": [
+                    {
+                        "input": [
+                            
+                        ],
+                        "output": [
+                            
+                        ]
+                    }
+                ]
             },
             {
                 "id":"btPaUzd2",
                 "name":"Užduotis 7",
+                "desc":"",
                 "task":"Apskaičiuokite žiedo plotą, kai išorinis jos spindulys yra r1, o vidinis – r2. Žiedo plotas apskaičiuojamas pagal formulę: \n\nS = π( r1^2 - r2^2 )",
                 "tags":[],
-                "startCode":"",
-                "progress":"Nepradėta",
-                "answer": 200
+                "startCode":"p = int(input())\n\n# Tavo kodas eina čia:",
+                "tests": [
+                    {
+                        "input": [
+                            
+                        ],
+                        "output": [
+                            
+                        ]
+                    }
+                ]
             }
         ]
     }

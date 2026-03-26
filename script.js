@@ -1,3 +1,13 @@
+let pyodide;
+let testData;
+
+async function initPython() {
+    if (!pyodide) {
+        pyodide = await loadPyodide();
+        console.log("Python Ready!");
+    }
+}
+
 async function loadJSON() {
     const data = await fetch('./src/data/tasks.json');
     return await data.json();
@@ -13,7 +23,8 @@ async function loadTaskList() {
         const taskElement = `
             <a class="list-item" href="${'uzduotis.html?task=' + task.id}">
                 <p class="list-item-title">${task.name}</p>
-                <p class="list-item-progress" progress="${task.progress === "Atlikta" ? "done" : (task.progress === "Pradėta" ? "in-progress" : "")}">${task.progress}</p>
+                <p class="list-item-description">${task.desc}</p>
+                <p class="list-item-progress" progress="">Neatlikta</p>
                 <div class="list-item-taglist">
                     <div class="tag" color="Green">Lengvas</div>
                 </div>
@@ -29,6 +40,7 @@ async function loadTask() {
     const pasirinktaUzduotis = params.get('task');
     const data = await loadJSON();
     const uzduotis = data.basicTasks.find(uzduotis => uzduotis.id === pasirinktaUzduotis);
+    testData = uzduotis.tests;
 
     const taskElement = document.getElementById('task');
     const codeElement = document.getElementById('code');
@@ -38,3 +50,71 @@ async function loadTask() {
     codeElement.innerText = uzduotis.startCode;
     nameElement.innerText = uzduotis.name;
 }
+
+async function runPython() {
+    await initPython();
+    const code = document.getElementById("code").innerText;
+    const output = document.getElementById("output");
+
+    pyodide.setStdout({
+        batched: (str) => { output.innerText += str + "\n"; }
+    });
+
+    pyodide.setStdin({
+        stdin: () => window.prompt("Python Input:")
+    });
+
+    try {
+        await pyodide.runPythonAsync(code);
+    } catch (err) {
+        output.innerText += "\n[Error]: " + err.message;
+    }
+}
+
+async function submitPython() {
+    await initPython();
+    const code = document.getElementById("code").innerText;
+    const outputEl = document.getElementById("output");
+    
+    outputEl.innerHTML += `<b>Pradedami bandymai (${testData.length})...</b><br><br>`;
+    let totalPassed = 0;
+
+    for (let i = 0; i < testData.length; i++) {
+        const test = testData[i];
+        let inputIndex = 0;
+        let capturedOutput = [];
+
+        pyodide.setStdout({
+            batched: (str) => capturedOutput.push(str.trim())
+        });
+
+        pyodide.setStdin({
+            stdin: () => {
+                const val = test.input[inputIndex];
+                inputIndex++;
+                return val;
+            }
+        });
+
+        try {
+            await pyodide.runPythonAsync(code);
+
+            const isCorrect = JSON.stringify(capturedOutput) === JSON.stringify(test.output);
+            if (isCorrect) {
+                totalPassed++;
+                outputEl.innerHTML += `<div style="color: green;">Bandymas ${i+1}: Teisingai</div>`;
+            } else {
+                outputEl.innerHTML += `<div style="color: red;">Bandymas ${i+1}: Neteisingai<br>
+                    <small>Tikėtasi: [${test.output}] | Gavome: [${capturedOutput}]</small></div><br>`;
+            }
+        } catch (err) {
+            outputEl.innerHTML += `<div style="color: orange;">Bandymas ${i+1}: Kažkas nepavyko</div>`;
+        }
+    }
+
+    if (totalPassed === testData.length) {
+        outputEl.innerHTML += `<br><div style="color: green;">Užduotis atlikta</div>`;
+    }
+}
+
+initPython();
