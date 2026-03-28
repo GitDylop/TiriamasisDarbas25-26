@@ -99,8 +99,26 @@ async function submitPython() {
         try {
             await pyodide.runPythonAsync(code);
 
-            const isCorrect = JSON.stringify(capturedOutput) === JSON.stringify(test.output);
-            if (isCorrect) {
+            let isCorrect = true;
+            
+            for (let j = 0; j < test.output.length; j++) {
+                let expected = test.output[j].toString().trim();
+                let received = capturedOutput[j] ? capturedOutput[j].toString().trim() : "";
+
+                let expNum = parseFloat(expected);
+                let recNum = parseFloat(received);
+
+                if (!isNaN(expNum) && !isNaN(recNum)) {
+                    if (Math.abs(expNum - recNum) > 0.01) {
+                        isCorrect = false;
+                    }
+                }
+                else if (expected !== received) {
+                    isCorrect = false;
+                }
+            }
+
+            if (isCorrect && capturedOutput.length === test.output.length) {
                 totalPassed++;
                 outputEl.innerHTML += `<div style="color: green;">Bandymas ${i+1}: Teisingai</div>`;
             } else {

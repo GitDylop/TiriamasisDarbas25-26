@@ -146,7 +146,7 @@
                 "desc":"Apskaičiuok kiek kainuoja 100 g. saldainių",
                 "task":"Už m kg saldainių sumokėta s eurų. Parašykite programą, kuri apskaičiuotų, kiek kainuoja 100 g. saldainių?",
                 "tags":[],
-                "startCode":"m = double(input())\ns = double(input())\n\n# Tavo kodas eina čia:",
+                "startCode":"m = float(input())\ns = float(input())\n\n# Tavo kodas eina čia:",
                 "tests": [
                     {
                         "input": [
@@ -156,41 +156,76 @@
                         "output": [
                             "1.52"
                         ]
+                    },
+                    {
+                        "input": [
+                            "5",
+                            "28.5"
+                        ],
+                        "output": [
+                            "0.57"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "0.1",
+                            "0.5"
+                        ],
+                        "output": [
+                            "0.5"
+                        ]
                     }
                 ]
             },
             {
                 "id":"btPaUzd1",
-                "name":"Užduotis 6",
-                "desc":"",
+                "name":"Grybautojų varžybos",
+                "desc":"Apskaičiuok kiek grybų pririnko kiekvienas brolis",
                 "task":"Penki broliai grybaudami surengė varžybas, kuris prirink daugiau baravykų. Arūnas rado b baravykų, Audrius – 2 baravykais daugiau, Arvydas – 4 baravykais mažiau už Arūną, Vytautas – tiek pat kiek Audrius, o Gintaras – dvigubai daugiau nei Arvydas. Parašykite programą, kuri apskaičiuotų, kiek baravykų pririnko visi broliai kartu, kai žinomas skaičius b.",
                 "tags":[],
-                "startCode":"p = int(input())\n\n# Tavo kodas eina čia:",
+                "startCode":"b = int(input())\n\n# Tavo kodas eina čia:",
                 "tests": [
                     {
                         "input": [
-                            
+                            "15"
                         ],
                         "output": [
-                            
+                            "82"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "9"
+                        ],
+                        "output": [
+                            "46"
+                        ]
+                    },
+                    {
+                        "input": [
+                            "2"
+                        ],
+                        "output": [
+                            "4"
                         ]
                     }
                 ]
             },
             {
                 "id":"btPaUzd2",
-                "name":"Užduotis 7",
-                "desc":"",
+                "name":"Žiedo plotis",
+                "desc":"Raskite žiedo plotį pagal formulę",
                 "task":"Apskaičiuokite žiedo plotą, kai išorinis jos spindulys yra r1, o vidinis – r2. Žiedo plotas apskaičiuojamas pagal formulę: \n\nS = π( r1^2 - r2^2 )",
                 "tags":[],
-                "startCode":"p = int(input())\n\n# Tavo kodas eina čia:",
+                "startCode":"r1 = int(input())\nr2 = int(input())\npi = 3.14\n\n# Tavo kodas eina čia:\n\n\nprint(round())",
                 "tests": [
                     {
                         "input": [
-                            
+                            "10",
+                            "6"
                         ],
                         "output": [
-                            
+                            "201"
                         ]
                     }
                 ]
