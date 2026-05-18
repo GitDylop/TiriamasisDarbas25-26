@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Užduotis</title>
+    <link rel="stylesheet" href="../mainStyle.css">
+</head>
+<body>
+    <header>
+        <a href="../pamokos.html">&larr; Atgal</a>
+    </header>
+    <div id="task-header">
+        <div id="task-name">Masyvai</div>
+        <button id="run-btn" onclick="runPython()">Vygdyti</button>
+        <button id="submit-btn" onclick="submitPython()">Pateikti</button>
+    </div>
+    <div id="user-area">
+        <div class="area">
+                <div class="tabIsland">
+                    <div class="tab active-tab">
+                        Užduotis
+                    </div>
+                    <div class="tab">
+                        Atsakymas
+                    </div>
+                </div>
+                <div id="task">
+
+                </div>
+            </div>
+        <div class="area">
+            <div class="tabIsland">
+                <div class="tab active-tab">
+                    Kodas
+                </div>
+            </div>
+            <div id="code" contenteditable="true">
+
+            </div>
+        </div>
+        <div class="area" style="grid-column: span 2;">
+            <div class="tabIsland">
+                <div class="tab active-tab">
+                    Išvestis
+                </div>
+                <div class="tab">
+                    Testai
+                </div>
+            </div>
+            <div id="output">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+const codeDiv = document.getElementById('code');
+
+codeDiv.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+        e.preventDefault();
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+
+        const tabNode = document.createTextNode('    ');
+        range.insertNode(tabNode);
+
+        range.setStartAfter(tabNode);
+        range.setEndAfter(tabNode);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+});
+
+window.onload = async () => {
+    await loadTask();
+}
+</script>
+<script src="../script.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+</html>

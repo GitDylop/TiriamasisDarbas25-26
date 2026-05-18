@@ -4,32 +4,62 @@ let testData;
 async function initPython() {
     if (!pyodide) {
         pyodide = await loadPyodide();
-        console.log("Python Ready!");
     }
 }
 
 async function loadJSON() {
-    const data = await fetch('./src/data/tasks.json');
+    const data = await fetch('../src/data/tasks.json');
     return await data.json();
 }
 
-async function loadTaskList() {
-    const data = await loadJSON();
-    const tasks = data.basicTasks;
-    const taskListElement = document.getElementById('content');
+async function loadTaskList(list) {
+    let tasks = [];
 
+    if (list === 'gemini') {
+        tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    } else {
+        const data = await loadJSON();
+        switch (list) {
+            case 'pamokos':
+                tasks = data.tutorial;
+                break;
+            case 'l_praktines':
+                tasks = data.basicTasks;
+                break;
+            case 'n_praktines':
+                tasks = data.normalTasks;
+                break;
+            case 's_praktines':
+                tasks = data.hardTasks;
+                break;
+        }
+    }
+
+    const taskListElement = document.getElementById('content');
+    if (!taskListElement) return;
+    
+    taskListElement.innerHTML = "";
+    
     tasks.forEach(task => {
-        console.log(task);
+        let tagElementsString = '';
+
+        if (task.tags && Array.isArray(task.tags)) {
+            task.tags.forEach(tag => {
+                tagElementsString += `<div class="tag" color="${tag.color}">${tag.name}</div>`;
+            });
+        }
+
         const taskElement = `
-            <a class="list-item" href="${'uzduotis.html?task=' + task.id}">
+            <a class="list-item" href="${list}/uzduotis.html?list=${list}&task=${task.id}">
                 <p class="list-item-title">${task.name}</p>
                 <p class="list-item-description">${task.desc}</p>
                 <p class="list-item-progress" progress="">Neatlikta</p>
                 <div class="list-item-taglist">
-                    <div class="tag" color="Green">Lengvas</div>
+                    ${tagElementsString}
                 </div>
+                ${list === 'gemini' ? `<div class="gemini-delete" onclick="deleteTask(event, '${task.id}')">Delete</div>` : ''}
             </a>
-        `
+        `;
 
         taskListElement.innerHTML += taskElement;
     });
@@ -37,19 +67,70 @@ async function loadTaskList() {
 
 async function loadTask() {
     const params = new URLSearchParams(window.location.search);
+    const selectedList = params.get('list') || 'pamokos';
     const pasirinktaUzduotis = params.get('task');
-    const data = await loadJSON();
-    const uzduotis = data.basicTasks.find(uzduotis => uzduotis.id === pasirinktaUzduotis);
+    
+    let tasks = [];
+
+    if (selectedList === 'gemini') {
+        tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    } else {
+        const data = await loadJSON();
+        switch (selectedList) {
+            case 'pamokos':
+                tasks = data.tutorial;
+                break;
+            case 'l_praktines':
+                tasks = data.basicTasks;
+                break;
+            case 'n_praktines':
+                tasks = data.normalTasks;
+                break;
+            case 's_praktines':
+                tasks = data.hardTasks;
+                break;
+        }
+    }
+
+    const uzduotis = tasks.find(uzduotis => uzduotis.id === pasirinktaUzduotis);
+    
+    if (!uzduotis) {
+        alert("Užduotis nerasta!");
+        return;
+    }
+
     testData = uzduotis.tests;
 
     const taskElement = document.getElementById('task');
     const codeElement = document.getElementById('code');
     const nameElement = document.getElementById('task-name');
 
-    taskElement.innerText = uzduotis.task;
+    taskElement.innerHTML = uzduotis.task;
     codeElement.innerText = uzduotis.startCode;
     nameElement.innerText = uzduotis.name;
 }
+
+window.deleteTask = function(event, taskId) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    if (!confirm("Ar tikrai norite ištrinti šią užduotį?")) {
+        return;
+    }
+
+    let localTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    localTasks = localTasks.filter(task => task.id !== taskId);
+    localStorage.setItem('tasks', JSON.stringify(localTasks));
+
+    if (typeof loadTaskList === "function") {
+        const taskListElement = document.getElementById('tasks-list');
+        if (taskListElement) taskListElement.innerHTML = '';
+        
+        loadTaskList("gemini");
+    }
+};
 
 async function runPython() {
     await initPython();
@@ -136,3 +217,10 @@ async function submitPython() {
 }
 
 initPython();
+
+function switchTab(self, parentId) {
+    const parent = document.getElementById(parentId);
+    const children = parent.querySelector('.f-tab[active]');
+    children.toggleAttribute('active');
+    self.toggleAttribute('active');
+}

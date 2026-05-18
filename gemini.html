@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Užduoties kūrimas</title>
+    <link rel="stylesheet" href="./mainStyle.css">
+</head>
+<body>
+    <header style="background: linear-gradient(90deg, rgb(0, 183, 255), rgb(255, 0, 255));">
+        <a href="./index.html">&larr; Atgal</a>
+    </header>
+    <div id="split-container">
+        <div id="content">
+            
+        </div>
+        <div id="gemini-panel">
+            <h1>Sukurti naują užduotį</h1>
+            <div class="floating-tab-island" id="island">
+                <div class="f-tab" active onclick="switchTab(this, 'island')">Lengva</div>
+                <div class="f-tab" onclick="switchTab(this, 'island')">Vidutinė</div>
+                <div class="f-tab" onclick="switchTab(this, 'island')">Sunki</div>
+            </div>
+            <div class="collapsed-menu">
+                <div class="cm-header">Papildomi nustatymai<img src="./src/images/DropDownArrowDark.svg"></div>
+                <div class="cm-content">
+                    <textarea name="" id="gemini-request-area" placeholder="Apie ką norėtumėtę užduoties"></textarea>
+                </div>
+            </div>
+
+            <button id="create-gemini-task-btn">Sukurti</button>
+
+            <div class="subtitle">Užduotys yra kuriamos naudojant dirbtinį intelektą.</div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = async () => {
+        await loadTaskList("gemini");
+    }
+</script>
+<script src="script.js"></script>
+<script type="module" src="gemini.js"></script>
+</html>

@@ -1,234 +1,675 @@
-
+{
+    "tutorial": [
+        {
+            "id": "tutUzd1",
+            "name": "Sveikas, Pasauli!",
+            "desc": "Išmokite išvesti tekstą į ekraną.",
+            "task": "Parašykite programą, kuri ekrane išvestų tekstą 'Sveikas, Pasauli!'.<br><br>Naudokite komandą <span>print()</span><br><br>Pavyzdys:<br><br><span>print(\"Tekstas\")</span>",
+            "tags": [
+                {
+                    "name": "Lengvas",
+                    "color": "Green"
+                }
+            ],
+            "startCode": "# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": [],
+                    "output": ["Sveikas, Pasauli!"]
+                }
+            ]
+        },
+        {
+            "id": "tutUzd2",
+            "name": "Sveikinimas",
+            "desc": "Išmokite nuskaityti tekstinę įvestį ir ją apjungti.",
+            "task": "Programa turi nuskaityti vartotojo vardą <span>v</span> ir išvesti pasisveikinimą formatu:<br><br><span>Labas, (v)!</span><hr>Tekstą sujungti galima dviem būdais:<br><br><span>+</span> - sujungia du tekstus į vieną.<br><br>Pavyzdys:<br><br><span>\"Tekstas1\" + \"Tekstas2\"</span><br><br>Rezultatas:<br><br><span>Tekstas1Tekstas2</span><br><br><br><br><span>,</span> - prijungia du tekstus atskirdamas juos tarpu.<br><br>Pavyzdys:<br><br><span>\"Tekstas1\", \"Tekstas2\"</span><br><br>Rezultatas:<br><br><span>Tekstas1 Tekstas2</span>",
+            "tags": [
+                {
+                    "name": "Lengvas",
+                    "color": "Green"
+                }
+            ],
+            "difficulty": "normal",
+            "startCode": "v = input()\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["Dovydas"],
+                    "output": ["Labas, Dovydas!"]
+                },
+                {
+                    "input": ["Elena"],
+                    "output": ["Labas, Elena!"]
+                },
+                {
+                    "input": ["Tomas"],
+                    "output": ["Labas, Tomas!"]
+                }
+            ]
+        },
+        {
+            "id": "tutUzd3",
+            "name": "Dviženklio skaičiaus sukeitimas",
+            "desc": "Skaičiaus skaitmenų atskyrimas ir naujo skaičiaus sudarymas.",
+            "task": "Duotas dviženklis skaičius n. Sukeiskite jo skaitmenis vietomis (pavyzdžiui, iš 27 gausime 72) ir išveskite gautą rezultatą kaip sveikąjį skaičių.<hr>Naudokite matematines operacijas <span>//</span> ir <span>%</span>:<br><br><span>//</span> - gražina dalinio sveikają dalį.<br><br>Pavyzdys:<br><br><span>5 // 2</span><br><br>Rezultatas:<br><br><span>2</span><br><br><br><br><span>%</span> - gražina dalinio liekaną.<br><br>Pavyzdys:<br><br><span>7 % 2</span><br><br>Rezultatas:<br><br><span>1</span>",
+            "tags": [
+                {
+                    "name": "Vidutinis",
+                    "color": "Orange"
+                }
+            ],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["27"],
+                    "output": ["72"]
+                },
+                {
+                    "input": ["40"],
+                    "output": ["4"]
+                },
+                {
+                    "input": ["99"],
+                    "output": ["99"]
+                }
+            ]
+        },
+        {
+        "id": "tutUzd4",
+        "name": "Didžiausias iš trijų",
+        "desc": "Sąlygos sakinių (if-elif-else) taikymas ieškant maksimumo.",
+        "task": "Duoti trys sveikieji skaičiai: a, b ir c. Parašykite programą, kuri nustatytų ir išvestų patį didžiausią skaičių. Visi skaičiai gali būti skirtingi arba vienodi.<br><br>Naudokite komandas <span>if</span>, <span>elif</span> ir <span>else</span> sąlygų tikrinimui bei palyginimo operatorių <span>&gt;</span> (daugiau).<hr>Kai turime daugiau nei dvi pasirinkimo šakas, naudojame <span>elif</span> (sutrumpinta iš else if). Programa tikrina sąlygas iš viršaus į apačią ir įvykdo tik tą bloką, kurio sąlygą randa pirmą teisingą.<br><br>Pavyzdys:<br><br><span>if a &gt; b and a &gt; c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(a)<br>elif b &gt; c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(b)<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(c)</span>",
+        "tags": [
+            {
+                "name": "Vidutinis",
+                "color": "Orange"
+            }
+        ],
+        "startCode": "a = int(input())\nb = int(input())\nc = int(input())\n\n# Tavo kodas eina čia:\n\n",
+        "tests": [
+            {
+                "input": ["5", "12", "2"],
+                "output": ["12"]
+            },
+            {
+                "input": ["9", "9", "3"],
+                "output": ["9"]
+            },
+            {
+                "input": ["-1", "-5", "-3"],
+                "output": ["-1"]
+            }
+        ]
+    },
     {
-        "basicTasks": [
+        "id": "tutUzd5",
+        "name": "Skaičių sekos sumavimas",
+        "desc": "Ciklų (for/while) valdymas ir kintamųjų kaupimas.",
+        "task": "Duotas teigiamas sveikasis skaičius n. Parašykite programą, kuri apskaičiuotų ir išvestų visų natūraliųjų skaičių sumą nuo 1 iki n (įskaitant ir n).<br><br>Naudokite ciklą <span>for</span> kartu su funkcija <span>range()</span>.<hr>Norint susumuoti reikšmes, prieš ciklą sukuriame kintamąjį (pvz., <span>suma = 0</span>). Ciklo viduje prie šio kintamojo nuolat pridedame einamąjį skaičių naudodami operatorių <span>+=</span>. Atminkite, kad <span>range(nuo, iki)</span> neįtraukia pabaigos skaičiaus, todėl norint skaičiuoti iki n, reikia naudoti n + 1.<br><br>Pavyzdys:<br><br><span>suma = 0<br>for i in range(1, n + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;suma += i<br>print(suma)</span>",
+        "tags": [
             {
-                "id":"btUzd1",
-                "name":"Konspektų lapai",
-                "desc":"Apskaičiuokite kiek lapų reikia visiems konspektams klasei.",
-                "task":"Parašykite programą, kuri apskaičiuotų, kiek popieriaus lapų k reikės norint nukopijuoti konspektą visos klasės mokiniams. Žinoma, kad klasėje yra m mokinių, o konspektą sudaro n lapų.",
-                "tags":[],
-                "startCode":"n = int(input())\nm = int(input())\n\n# Tavo kodas eina čia:\n\n",
-                "tests": [
-                    {
-                        "input": [
-                            "10",
-                            "20"
-                        ],
-                        "output": [
-                            "200"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "1",
-                            "15"
-                        ],
-                        "output": [
-                            "15"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "99",
-                            "2"
-                        ],
-                        "output": [
-                            "198"
-                        ]
-                    }
-                ]
+                "name": "Sudėtingas",
+                "color": "Red"
+            }
+        ],
+        "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+        "tests": [
+            {
+                "input": ["5"],
+                "output": ["15"]
             },
             {
-                "id":"btUzd2",
-                "name":"Laiko apskaičiavimas",
-                "desc":"Apskaičiuokite parų laiką smulkesniais matais.",
-                "task":"Paros laiką galima išmatuoti valandomis ir minutėmis atskirai. Kiekvienas vienetas per parą turi atitinkamą kiekį. Nustatykite, kiek minučių ir valandų turi p parų.",
-                "tags":[],
-                "startCode":"p = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Valandos: {} Minutės: {}\")",
-                "tests": [
-                    {
-                        "input": [
-                            "1"
-                        ],
-                        "output": [
-                            "Valandos: 24 Minutės: 1440"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "2"
-                        ],
-                        "output": [
-                            "Valandos: 48 Minutės: 2880"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "10"
-                        ],
-                        "output": [
-                            "Valandos: 240 Minutės: 14400"
-                        ]
-                    }
-                ]
+                "input": ["1"],
+                "output": ["1"]
             },
             {
-                "id":"btUzd3",
-                "name":"Gimtadienis",
-                "desc":"Apskaičiuokite Tautvydo amžių mėnesiais, dienomis ir valandomis",
-                "task":"Šiandien Tautvydas švenčia gimtadienį. Jam sukanka m metų. Parašykite programą, kuri apskaičiuotų, kiek mėnesių, dienų ir valandų Tautvydas jau gyvena. Tarkime kad metai turi 365 dienas.",
-                "tags":[],
-                "startCode":"m = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Mėnesiai: {} Dienos: {} Valandos: {}\")",
-                "tests": [
-                    {
-                        "input": [
-                            "16"
-                        ],
-                        "output": [
-                            "Mėnesiai: 192 Dienos: 5840 Valandos: 140160"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "1"
-                        ],
-                        "output": [
-                            "Mėnesiai: 12 Dienos: 365 Valandos: 8760"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "0"
-                        ],
-                        "output": [
-                            "Mėnesiai: 0 Dienos: 0 Valandos: 0"
-                        ]
-                    }
-                ]
+                "input": ["100"],
+                "output": ["5050"]
+            }
+        ]
+    },
+    {
+        "id": "tutUzd6",
+        "name": "Pirminis skaičius",
+        "desc": "Sudėtingesnė logika su ciklais ir liekanų tikrinimu.",
+        "task": "Sveikasis skaičius n yra vadinamas pirminiu, jei jis dalijasi tik iš savęs ir iš 1. Skaičius 1 nėra pirminis. Parašykite programą, kuri patikrintų, ar duotas skaičius n (n &gt; 0) yra pirminis. Jei pirminis, išveskite 'Taip', jei ne – 'Ne'.<br><br>Naudokite kintamąjį-vėliavėlę (boolean) arba daliklių skaičiavimą.<hr>Logiką galima sukurti skaičiuojant, kiek daliklių turi skaičius intervale nuo 1 iki n. Jei daliklių skaičius lygus tiksliai 2 (skaičius dalijasi tik iš 1 ir savęs), vadinasi jis pirminis. Dalijimąsi be liekanos tikriname su <span>% == 0</span>.<br><br>Pavyzdys su daliklių skaičiavimu:<br><br><span>dalikliai = 0<br>for i in range(1, n + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dalikliai += 1</span><br><br>Po ciklo belieka su <span>if</span> patikrinti, ar daliklių kiekis lygus 2, ir išvesti atitinkamą tekstą.",
+        "tags": [
+            {
+                "name": "Sudėtingas",
+                "color": "Red"
+            }
+        ],
+        "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+        "tests": [
+            {
+                "input": ["7"],
+                "output": ["Taip"]
             },
             {
-                "id":"btUzd4",
-                "name":"Kvadratinė formulė",
-                "desc":"Raskite y reikšmę pagal x reikšmę",
-                "task":"Parašykite programą, kuri apskaičiuotų y = x^2+2 reikšmę, kai duotas x.",
-                "tags":[],
-                "startCode":"x = int(input())\n\n# Tavo kodas eina čia:",
-                "tests": [
-                    {
-                        "input": [
-                            "2"
-                        ],
-                        "output": [
-                            "6"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "0"
-                        ],
-                        "output": [
-                            "2"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "-2"
-                        ],
-                        "output": [
-                            "6"
-                        ]
-                    }
-                ]
+                "input": ["4"],
+                "output": ["Ne"]
             },
             {
-                "id":"btUzd5",
-                "name":"Saldainių kaina",
-                "desc":"Apskaičiuok kiek kainuoja 100 g. saldainių",
-                "task":"Už m kg saldainių sumokėta s eurų. Parašykite programą, kuri apskaičiuotų, kiek kainuoja 100 g. saldainių?",
-                "tags":[],
-                "startCode":"m = float(input())\ns = float(input())\n\n# Tavo kodas eina čia:",
-                "tests": [
-                    {
-                        "input": [
-                            "2.4",
-                            "36.5"
-                        ],
-                        "output": [
-                            "1.52"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "5",
-                            "28.5"
-                        ],
-                        "output": [
-                            "0.57"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "0.1",
-                            "0.5"
-                        ],
-                        "output": [
-                            "0.5"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id":"btPaUzd1",
-                "name":"Grybautojų varžybos",
-                "desc":"Apskaičiuok kiek grybų pririnko kiekvienas brolis",
-                "task":"Penki broliai grybaudami surengė varžybas, kuris prirink daugiau baravykų. Arūnas rado b baravykų, Audrius – 2 baravykais daugiau, Arvydas – 4 baravykais mažiau už Arūną, Vytautas – tiek pat kiek Audrius, o Gintaras – dvigubai daugiau nei Arvydas. Parašykite programą, kuri apskaičiuotų, kiek baravykų pririnko visi broliai kartu, kai žinomas skaičius b.",
-                "tags":[],
-                "startCode":"b = int(input())\n\n# Tavo kodas eina čia:",
-                "tests": [
-                    {
-                        "input": [
-                            "15"
-                        ],
-                        "output": [
-                            "82"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "9"
-                        ],
-                        "output": [
-                            "46"
-                        ]
-                    },
-                    {
-                        "input": [
-                            "2"
-                        ],
-                        "output": [
-                            "4"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id":"btPaUzd2",
-                "name":"Žiedo plotis",
-                "desc":"Raskite žiedo plotį pagal formulę",
-                "task":"Apskaičiuokite žiedo plotą, kai išorinis jos spindulys yra r1, o vidinis – r2. Žiedo plotas apskaičiuojamas pagal formulę: \n\nS = π( r1^2 - r2^2 )",
-                "tags":[],
-                "startCode":"r1 = int(input())\nr2 = int(input())\npi = 3.14\n\n# Tavo kodas eina čia:\n\n\nprint(round())",
-                "tests": [
-                    {
-                        "input": [
-                            "10",
-                            "6"
-                        ],
-                        "output": [
-                            "201"
-                        ]
-                    }
-                ]
+                "input": ["1"],
+                "output": ["Ne"]
             }
         ]
     }
+    ],
+
+    "basicTasks": [
+        {
+            "id":"btUzd1",
+            "name":"Konspektų lapai",
+            "desc":"Apskaičiuokite kiek lapų reikia visiems konspektams klasei.",
+            "task":"Parašykite programą, kuri apskaičiuotų, kiek popieriaus lapų <span>k</span> reikės norint nukopijuoti konspektą visos klasės mokiniams. Žinoma, kad klasėje yra <span>m</span> mokinių, o konspektą sudaro <span>n</span> lapų.",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"n = int(input())\nm = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": [
+                        "10",
+                        "20"
+                    ],
+                    "output": [
+                        "200"
+                    ]
+                },
+                {
+                    "input": [
+                        "1",
+                        "15"
+                    ],
+                    "output": [
+                        "15"
+                    ]
+                },
+                {
+                    "input": [
+                        "99",
+                        "2"
+                    ],
+                    "output": [
+                        "198"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"btUzd2",
+            "name":"Laiko apskaičiavimas",
+            "desc":"Apskaičiuokite parų laiką smulkesniais matais.",
+            "task":"Paros laiką galima išmatuoti valandomis ir minutėmis atskirai. Kiekvienas vienetas per parą turi atitinkamą kiekį. Nustatykite, kiek minučių ir valandų turi <span>p</span> parų.",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"p = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Valandos: {} Minutės: {}\")",
+            "tests": [
+                {
+                    "input": [
+                        "1"
+                    ],
+                    "output": [
+                        "Valandos: 24 Minutės: 1440"
+                    ]
+                },
+                {
+                    "input": [
+                        "2"
+                    ],
+                    "output": [
+                        "Valandos: 48 Minutės: 2880"
+                    ]
+                },
+                {
+                    "input": [
+                        "10"
+                    ],
+                    "output": [
+                        "Valandos: 240 Minutės: 14400"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"btUzd3",
+            "name":"Gimtadienis",
+            "desc":"Apskaičiuokite Tautvydo amžių mėnesiais, dienomis ir valandomis",
+            "task":"Šiandien Tautvydas švenčia gimtadienį. Jam sukanka <span>m</span> metų. Parašykite programą, kuri apskaičiuotų, kiek mėnesių, dienų ir valandų Tautvydas jau gyvena. Tarkime kad metai turi 365 dienas.",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"m = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Mėnesiai: {} Dienos: {} Valandos: {}\")",
+            "tests": [
+                {
+                    "input": [
+                        "16"
+                    ],
+                    "output": [
+                        "Mėnesiai: 192 Dienos: 5840 Valandos: 140160"
+                    ]
+                },
+                {
+                    "input": [
+                        "1"
+                    ],
+                    "output": [
+                        "Mėnesiai: 12 Dienos: 365 Valandos: 8760"
+                    ]
+                },
+                {
+                    "input": [
+                        "0"
+                    ],
+                    "output": [
+                        "Mėnesiai: 0 Dienos: 0 Valandos: 0"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"btUzd4",
+            "name":"Kvadratinė formulė",
+            "desc":"Raskite y reikšmę pagal x reikšmę",
+            "task":"Parašykite programą, kuri apskaičiuotų <span>y = x^2+2</span> reikšmę, kai duotas <span>x</span>.",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"x = int(input())\n\n# Tavo kodas eina čia:",
+            "tests": [
+                {
+                    "input": [
+                        "2"
+                    ],
+                    "output": [
+                        "6"
+                    ]
+                },
+                {
+                    "input": [
+                        "0"
+                    ],
+                    "output": [
+                        "2"
+                    ]
+                },
+                {
+                    "input": [
+                        "-2"
+                    ],
+                    "output": [
+                        "6"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"btUzd5",
+            "name":"Saldainių kaina",
+            "desc":"Apskaičiuok kiek kainuoja 100 g. saldainių",
+            "task":"Už <span>m</span> kg saldainių sumokėta <span>s</span> eurų. Parašykite programą, kuri apskaičiuotų, kiek kainuoja 100 g. saldainių?",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"m = float(input())\ns = float(input())\n\n# Tavo kodas eina čia:",
+            "tests": [
+                {
+                    "input": [
+                        "2.4",
+                        "36.5"
+                    ],
+                    "output": [
+                        "1.52"
+                    ]
+                },
+                {
+                    "input": [
+                        "5",
+                        "28.5"
+                    ],
+                    "output": [
+                        "0.57"
+                    ]
+                },
+                {
+                    "input": [
+                        "0.1",
+                        "0.5"
+                    ],
+                    "output": [
+                        "0.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"btPaUzd1",
+            "name":"Grybautojų varžybos",
+            "desc":"Apskaičiuok kiek grybų pririnko kiekvienas brolis",
+            "task":"Penki broliai grybaudami surengė varžybas, kuris prirink daugiau baravykų. Arūnas rado <span>b</span> baravykų, Audrius – 2 baravykais daugiau, Arvydas – 4 baravykais mažiau už Arūną, Vytautas – tiek pat kiek Audrius, o Gintaras – dvigubai daugiau nei Arvydas. Parašykite programą, kuri apskaičiuotų, kiek baravykų pririnko visi broliai kartu, kai žinomas skaičius <span>b</span>.",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"b = int(input())\n\n# Tavo kodas eina čia:",
+            "tests": [
+                {
+                    "input": [
+                        "15"
+                    ],
+                    "output": [
+                        "82"
+                    ]
+                },
+                {
+                    "input": [
+                        "9"
+                    ],
+                    "output": [
+                        "46"
+                    ]
+                },
+                {
+                    "input": [
+                        "2"
+                    ],
+                    "output": [
+                        "4"
+                    ]
+                }
+            ]
+        },
+        {
+            "id":"btPaUzd2",
+            "name":"Žiedo plotis",
+            "desc":"Raskite žiedo plotį pagal formulę",
+            "task":"Apskaičiuokite žiedo plotą, kai išorinis jos spindulys yra <span>r1</span>, o vidinis – <span>r2</span>.<br><br>Žiedo plotas apskaičiuojamas pagal formulę:<br><br><span>S = pi * (r1^2 - r2^2)</span>",
+            "tags": [{
+                "name":"Lengvas",
+                "color":"Green"
+            }],
+            "startCode":"r1 = int(input())\nr2 = int(input())\npi = 3.14\n\n# Tavo kodas eina čia:\n\n\nprint(round())",
+            "tests": [
+                {
+                    "input": [
+                        "10",
+                        "6"
+                    ],
+                    "output": [
+                        "201"
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "normalTasks": [
+        {
+            "id": "ntUzd1",
+            "name": "Kino bilietai",
+            "desc": "Apskaičiuokite bendrą bilietų kainą taikant nuolaidas grupėms.",
+            "task": "Kino bilietas kainuoja <span>s</span> eurų. Jeigu į kiną eina <span>n</span> mokinių grupė, kurioje yra daugiau nei 10 žmonių, visiems bilietams taikoma 15% nuolaida. Parašykite programą, kuri apskaičiuotų, kiek iš viso sumokės mokinių grupė. Rezultatą suapvalinkite iki 2 skaičių po kablelio.",
+            "tags": [{
+                "name":"Vidutinis",
+                "color":"Orange"
+            }],
+            "startCode": "s = float(input())\nn = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["6.50", "8"],
+                    "output": ["52.0"]
+                },
+                {
+                    "input": ["7.00", "12"],
+                    "output": ["71.4"]
+                },
+                {
+                    "input": ["5.00", "10"],
+                    "output": ["50.0"]
+                }
+            ]
+        },
+        {
+            "id": "ntUzd2",
+            "name": "Skaitmenų suma",
+            "desc": "Apskaičiuokite triženklio skaičiaus skaitmenų sumą.",
+            "task": "Duotas triženklis sveikasis skaičius <span>n</span>. Parašykite programą, kuri atskirtų šio skaičiaus skaitmenis ir apskaičiuotų jų sumą.<br><br>(Patarimas: naudokite <span>%</span> ir <span>//</span> operatorius).",
+            "tags": [{
+                "name":"Vidutinis",
+                "color":"Orange"
+            }],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["524"],
+                    "output": ["11"]
+                },
+                {
+                    "input": ["103"],
+                    "output": ["4"]
+                },
+                {
+                    "input": ["999"],
+                    "output": ["27"]
+                }
+            ]
+        },
+        {
+            "id": "ntUzd3",
+            "name": "Kelionės trukmė",
+            "desc": "Konvertuokite minutes į valandas ir minutes.",
+            "task": "Autobusas iš Vilniaus į Klaipėdą važiuoja <span>m</span> minučių. Parašykite programą, kuri išreikštų šį laiką valandomis ir minutėmis.<br><br>Pavyzdžiui, jei įvestis yra 185, programa turi išvesti '3 val. ir 5 min.'",
+            "tags": [{
+                "name":"Vidutinis",
+                "color":"Orange"
+            }],
+            "difficulty": "normal",
+            "startCode": "m = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"{val} val. ir {min} min.\")",
+            "tests": [
+                {
+                    "input": ["185"],
+                    "output": ["3 val. ir 5 min."]
+                },
+                {
+                    "input": ["60"],
+                    "output": ["1 val. ir 0 min."]
+                },
+                {
+                    "input": ["45"],
+                    "output": ["0 val. ir 45 min."]
+                }
+            ]
+        },
+        {
+            "id": "ntUzd4",
+            "name": "Prekių pakavimas",
+            "desc": "Raskite kiek dėžių bus pilnos ir kiek prekių liks.",
+            "task": "Gamykla pagamino <span>n</span> detalių. Jos pakuojamos į dėžes po <span>k</span> detalių. Parašykite programą, kuri apskaičiuotų, kiek pilnų dėžių pavyks supakuoti ir kiek detalių liks nesupakuota.",
+            "tags": [{
+                "name":"Vidutinis",
+                "color":"Orange"
+            }],
+            "difficulty": "normal",
+            "startCode": "n = int(input())\nk = int(input())\n\n# Tavo kodas eina čia:\n\n\nprint(f\"Dėžės: {dezes} Likutis: {likutis}\")",
+            "tests": [
+                {
+                    "input": ["125", "10"],
+                    "output": ["Dėžės: 12 Likutis: 5"]
+                },
+                {
+                    "input": ["45", "50"],
+                    "output": ["Dėžės: 0 Likutis: 45"]
+                },
+                {
+                    "input": ["100", "10"],
+                    "output": ["Dėžės: 10 Likutis: 0"]
+                }
+            ]
+        },
+        {
+            "id": "ntUzd5",
+            "name": "Metų laikai",
+            "desc": "Nustatykite metų laiką pagal mėnesio numerį.",
+            "task": "Duotas mėnesio numeris <span>m</span> (nuo 1 iki 12). Parašykite programą, kuri išvestų metų laiką: 'Žiema' (12, 1, 2 mėnesiai), 'Pavasaris' (3, 4, 5), 'Vasara' (6, 7, 8) arba 'Ruduo' (9, 10, 11).",
+            "tags": [{
+                "name":"Vidutinis",
+                "color":"Orange"
+            }],
+            "difficulty": "normal",
+            "startCode": "m = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["1"],
+                    "output": ["Žiema"]
+                },
+                {
+                    "input": ["4"],
+                    "output": ["Pavasaris"]
+                },
+                {
+                    "input": ["7"],
+                    "output": ["Vasara"]
+                },
+                {
+                    "input": ["11"],
+                    "output": ["Ruduo"]
+                }
+            ]
+        }
+    ],
+
+    "hardTasks": [
+        {
+            "id": "htUzd1",
+            "name": "Pirmieji pirminiai skaičiai",
+            "desc": "Raskite n-tąjį pirminį skaičių sekoje.",
+            "task": "Pirminis skaičius yra natūralusis skaičius, didesnis už 1, kuris dalijasi tik iš savęs ir vieneto. Parašykite programą, kuri surastų ir išvestų <span>n</span>-tąjį pirminį skaičių sekoje (pvz., jei <span>n = 1</span>, rezultatas yra 2; jei <span>n = 4</span>, rezultatas yra 7).",
+            "tags": [{
+                "name": "Sunkus",
+                "color": "Red"
+            }],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["1"],
+                    "output": ["2"]
+                },
+                {
+                    "input": ["4"],
+                    "output": ["7"]
+                },
+                {
+                    "input": ["10"],
+                    "output": ["29"]
+                }
+            ]
+        },
+        {
+            "id": "htUzd2",
+            "name": "Skaitmenų persistatymas",
+            "desc": "Suraskite didžiausią įmanomą skaičių sukeitus skaitmenis.",
+            "task": "Duotas teigiamas sveikasis skaičius <span>n</span>. Parašykite programą, kuri sukeistų skaičiaus skaitmenis vietomis taip, kad gautųsi pats didžiausias įmanomas skaičius, ir išvestų jį kaip sveikąjį skaičių.<br><br>Pavyzdžiui, iš skaičiaus 2061 turime gauti 6210.",
+            "tags": [{
+                "name": "Sunkus",
+                "color": "Red"
+            }],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["2061"],
+                    "output": ["6210"]
+                },
+                {
+                    "input": ["8839"],
+                    "output": ["9883"]
+                },
+                {
+                    "input": ["400"],
+                    "output": ["400"]
+                }
+            ]
+        },
+        {
+            "id": "htUzd3",
+            "name": "Monetų grąža",
+            "desc": "Apskaičiuokite mažiausią monetų kiekį grąžai atiduoti.",
+            "task": "Nusipirkus prekę, parduotuvėje reikia atiduoti <span>g</span> centų grąžos. Turimos monetos yra 50, 20, 10, 5, 2 ir 1 cento nominalo. Parašykite programą, kuri apskaičiuotų, kokiu mažiausiu monetų skaičiumi galima atiduoti šią grąžą.<br><br>Patarimas: naudokite ciklą arba nuoseklų dalijimą iš stambesnių monetų su <span>//</span> ir <span>%</span>.",
+            "tags": [{
+                "name": "Sunkus",
+                "color": "Red"
+            }],
+            "startCode": "g = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["87"],
+                    "output": ["5"]
+                },
+                {
+                    "input": ["13"],
+                    "output": ["3"]
+                },
+                {
+                    "input": ["50"],
+                    "output": ["1"]
+                }
+            ]
+        },
+        {
+            "id": "htUzd4",
+            "name": "Simetriškas skaičius (Palindromas)",
+            "desc": "Patikrinkite, ar skaičius skaitomas vienodai iš abiejų pusių.",
+            "task": "Parašykite programą, kuri patikrintų, ar duotas sveikasis skaičius <span>n</span> yra palindromas (skaitomas vienodai tiek iš kairės į dešinę, tiek iš dešinės į kairę). Jeigu skaičius simetriškas, išveskite <span>TAIP</span>, o jei nesimetriškas – <span>NE</span>.",
+            "tags": [{
+                "name": "Sunkus",
+                "color": "Red"
+            }],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["12321"],
+                    "output": ["TAIP"]
+                },
+                {
+                    "input": ["4554"],
+                    "output": ["TAIP"]
+                },
+                {
+                    "input": ["1234"],
+                    "output": ["NE"]
+                }
+            ]
+        },
+        {
+            "id": "htUzd5",
+            "name": "Fibonačio skaičiai",
+            "desc": "Apskaičiuokite n-tąjį Fibonačio sekos narį.",
+            "task": "Fibonačio seka prasideda skaičiais 0 ir 1, o kiekvienas kitas sekos narys yra lygus dviejų prieš jį einančių narių sumai (0, 1, 1, 2, 3, 5, 8, 13...).<br><br>Parašykite programą, kuri surastų ir išvestų <span>n</span>-tąjį Fibonačio sekos narį, kai sekos pradžia laikomas 0 narys (<span>n = 0</span> -> 0, <span>n = 1</span> -> 1, <span>n = 6</span> -> 8).",
+            "tags": [{
+                "name": "Sunkus",
+                "color": "Red"
+            }],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["0"],
+                    "output": ["0"]
+                },
+                {
+                    "input": ["1"],
+                    "output": ["1"]
+                },
+                {
+                    "input": ["6"],
+                    "output": ["8"]
+                }
+            ]
+        }
+    ]
+}
