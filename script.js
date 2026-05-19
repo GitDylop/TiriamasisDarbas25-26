@@ -8,10 +8,16 @@ async function initPython() {
 }
 
 async function loadJSON() {
-    const pathSegments = window.location.pathname.split('/');
-    const isSubfolder = pathSegments.length > 2 || window.location.pathname.includes('/pamokos/');
-    const prefix = isSubfolder ? '../' : '';
+    const currentPath = window.location.pathname;
     
+    const isSubfolder = currentPath.includes('/pamokos/') || 
+                        currentPath.includes('/l_praktines/') || 
+                        currentPath.includes('/n_praktines/') || 
+                        currentPath.includes('/s_praktines/') ||
+                        currentPath.includes('/gemini/');
+                        
+    const prefix = isSubfolder ? '../' : '';
+
     const data = await fetch(`${prefix}src/data/tasks.json`);
     return await data.json();
 }
