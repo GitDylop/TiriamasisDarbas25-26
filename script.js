@@ -8,7 +8,10 @@ async function initPython() {
 }
 
 async function loadJSON() {
-    const data = await fetch('src/data/tasks.json');
+    const isSubfolder = window.location.pathname.includes('/pamokos/');
+    const prefix = isSubfolder ? '../' : '';
+    
+    const data = await fetch(`${prefix}src/data/tasks.json`);
     return await data.json();
 }
 
