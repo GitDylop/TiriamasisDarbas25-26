@@ -1,6 +1,6 @@
 import { GoogleGenAI, Type } from 'https://esm.run/@google/genai';
 
-const obfuscatedKey = "QUl6YVN5RFQ4dHdqeDZFRWotYzZWeXhQLTNxblBmYlJfQTJsUjkw";
+const obfuscatedKey = "QUl6YVN5Q0ZXNVo4bl8yZktWR3FiX1Roc1Q2ZjdXdG1Yd2VvTExJ";
 const cleanKey = atob(obfuscatedKey);
 
 const ai = new GoogleGenAI({ apiKey: cleanKey });
