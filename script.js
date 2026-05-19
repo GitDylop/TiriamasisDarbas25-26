@@ -8,17 +8,11 @@ async function initPython() {
 }
 
 async function loadJSON() {
-    const currentPath = window.location.pathname;
+    const isSubfolderPage = window.location.pathname.endsWith('uzduotis.html');
     
-    const isSubfolder = currentPath.includes('/pamokos/') || 
-                        currentPath.includes('/l_praktines/') || 
-                        currentPath.includes('/n_praktines/') || 
-                        currentPath.includes('/s_praktines/') ||
-                        currentPath.includes('/gemini/');
-                        
-    const prefix = isSubfolder ? '../' : '';
+    const prefix = isSubfolderPage ? '../' : '';
 
-    const data = await fetch(`${prefix}src/data/tasks.json`);
+    const data = await fetch(`${prefix}tasks.json`);
     return await data.json();
 }
 
