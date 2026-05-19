@@ -21,8 +21,8 @@
                 <div class="f-tab" onclick="switchTab(this, 'island')">Vidutinė</div>
                 <div class="f-tab" onclick="switchTab(this, 'island')">Sunki</div>
             </div>
-            <div class="collapsed-menu">
-                <div class="cm-header">Papildomi nustatymai<img src="./src/images/DropDownArrowDark.svg"></div>
+            <div class="collapsed-menu" id="cm">
+                <div class="cm-header" onclick="collapse('cm')">Papildomi nustatymai<img src="./src/images/DropDownArrowDark.svg"></div>
                 <div class="cm-content">
                     <textarea name="" id="gemini-request-area" placeholder="Apie ką norėtumėtę užduoties"></textarea>
                 </div>

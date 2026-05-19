@@ -8,7 +8,7 @@ async function initPython() {
 }
 
 async function loadJSON() {
-    const data = await fetch('../src/data/tasks.json');
+    const data = await fetch('src/data/tasks.json');
     return await data.json();
 }
 
@@ -223,4 +223,9 @@ function switchTab(self, parentId) {
     const children = parent.querySelector('.f-tab[active]');
     children.toggleAttribute('active');
     self.toggleAttribute('active');
+}
+
+function collapse(parentId) {
+    const parent = document.getElementById(parentId);
+    parent.toggleAttribute('collapsed');
 }

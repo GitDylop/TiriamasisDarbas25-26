@@ -238,10 +238,12 @@ header > a {
     border: none;
     overflow-y: hidden;
     box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.20);
+    max-height: 300px;
+    transition: all 0.3s ease-in-out;
 }
 
 .collapsed-menu[collapsed] {
-    height: 50px;
+    max-height: 50px;
 }
 
 .cm-header {
@@ -258,7 +260,7 @@ header > a {
 }
 
 .cm-header:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 .collapsed-menu img {
@@ -268,24 +270,19 @@ header > a {
 }
 
 .collapsed-menu[collapsed] img {
-    transform: translateY(4px) rotateZ(0deg);
+    transform: translateY(2px) rotateZ(0deg);
 }
 
 .collapsed-menu > .cm-content {
-    display: block;
     padding: 5px 10px;
-}
-
-.collapsed-menu[collapsed] > .cm-content {
-    display: none;
 }
 
 #gemini-request-area {
     padding: 10px;
     width: calc(100% - 20px);
-    height: max-content;
+    height: 150px;
     background-color: rgba(0, 0, 0, 0.1);
-    resize: vertical;
+    resize: none;
     border: none;
     border-radius: 16px;
     outline: none;
