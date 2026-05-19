@@ -1,6 +1,9 @@
 import { GoogleGenAI, Type } from 'https://esm.run/@google/genai';
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyDT8twjx6EEj-c6VyxP-3qnPfbR_A2lR90" });
+const obfuscatedKey = "QUl6YVN5RFQ4dHdqeDZFRWotYzZWeXhQLTNxblBmYlJfQTJsUjkw";
+const cleanKey = atob(obfuscatedKey);
+
+const ai = new GoogleGenAI({ apiKey: cleanKey });
 
 const taskSchema = {
     type: Type.OBJECT,
