@@ -17,7 +17,8 @@
                     "input": [],
                     "output": ["Sveikas, Pasauli!"]
                 }
-            ]
+            ],
+            "answer": "print(\"Sveikas, Pasauli!\")"
         },
         {
             "id": "tutUzd2",
@@ -45,7 +46,8 @@
                     "input": ["Tomas"],
                     "output": ["Labas, Tomas!"]
                 }
-            ]
+            ],
+            "answer": "v = input()<br><br>print(\"Labas, \" + v + \"!\")"
         },
         {
             "id": "tutUzd3",
@@ -72,89 +74,93 @@
                     "input": ["99"],
                     "output": ["99"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())<br><br>s1 = n // 10<br>s2 = n % 10<br><br>print(s2 * 10 + s1)"
         },
         {
-        "id": "tutUzd4",
-        "name": "Didžiausias iš trijų",
-        "desc": "Sąlygos sakinių (if-elif-else) taikymas ieškant maksimumo.",
-        "task": "Duoti trys sveikieji skaičiai: a, b ir c. Parašykite programą, kuri nustatytų ir išvestų patį didžiausią skaičių. Visi skaičiai gali būti skirtingi arba vienodi.<br><br>Naudokite komandas <span>if</span>, <span>elif</span> ir <span>else</span> sąlygų tikrinimui bei palyginimo operatorių <span>&gt;</span> (daugiau).<hr>Kai turime daugiau nei dvi pasirinkimo šakas, naudojame <span>elif</span> (sutrumpinta iš else if). Programa tikrina sąlygas iš viršaus į apačią ir įvykdo tik tą bloką, kurio sąlygą randa pirmą teisingą.<br><br>Pavyzdys:<br><br><span>if a &gt; b and a &gt; c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(a)<br>elif b &gt; c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(b)<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(c)</span>",
-        "tags": [
-            {
-                "name": "Vidutinis",
-                "color": "Orange"
-            }
-        ],
-        "startCode": "a = int(input())\nb = int(input())\nc = int(input())\n\n# Tavo kodas eina čia:\n\n",
-        "tests": [
-            {
-                "input": ["5", "12", "2"],
-                "output": ["12"]
-            },
-            {
-                "input": ["9", "9", "3"],
-                "output": ["9"]
-            },
-            {
-                "input": ["-1", "-5", "-3"],
-                "output": ["-1"]
-            }
-        ]
-    },
-    {
-        "id": "tutUzd5",
-        "name": "Skaičių sekos sumavimas",
-        "desc": "Ciklų (for/while) valdymas ir kintamųjų kaupimas.",
-        "task": "Duotas teigiamas sveikasis skaičius n. Parašykite programą, kuri apskaičiuotų ir išvestų visų natūraliųjų skaičių sumą nuo 1 iki n (įskaitant ir n).<br><br>Naudokite ciklą <span>for</span> kartu su funkcija <span>range()</span>.<hr>Norint susumuoti reikšmes, prieš ciklą sukuriame kintamąjį (pvz., <span>suma = 0</span>). Ciklo viduje prie šio kintamojo nuolat pridedame einamąjį skaičių naudodami operatorių <span>+=</span>. Atminkite, kad <span>range(nuo, iki)</span> neįtraukia pabaigos skaičiaus, todėl norint skaičiuoti iki n, reikia naudoti n + 1.<br><br>Pavyzdys:<br><br><span>suma = 0<br>for i in range(1, n + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;suma += i<br>print(suma)</span>",
-        "tags": [
-            {
-                "name": "Sudėtingas",
-                "color": "Red"
-            }
-        ],
-        "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
-        "tests": [
-            {
-                "input": ["5"],
-                "output": ["15"]
-            },
-            {
-                "input": ["1"],
-                "output": ["1"]
-            },
-            {
-                "input": ["100"],
-                "output": ["5050"]
-            }
-        ]
-    },
-    {
-        "id": "tutUzd6",
-        "name": "Pirminis skaičius",
-        "desc": "Sudėtingesnė logika su ciklais ir liekanų tikrinimu.",
-        "task": "Sveikasis skaičius n yra vadinamas pirminiu, jei jis dalijasi tik iš savęs ir iš 1. Skaičius 1 nėra pirminis. Parašykite programą, kuri patikrintų, ar duotas skaičius n (n &gt; 0) yra pirminis. Jei pirminis, išveskite 'Taip', jei ne – 'Ne'.<br><br>Naudokite kintamąjį-vėliavėlę (boolean) arba daliklių skaičiavimą.<hr>Logiką galima sukurti skaičiuojant, kiek daliklių turi skaičius intervale nuo 1 iki n. Jei daliklių skaičius lygus tiksliai 2 (skaičius dalijasi tik iš 1 ir savęs), vadinasi jis pirminis. Dalijimąsi be liekanos tikriname su <span>% == 0</span>.<br><br>Pavyzdys su daliklių skaičiavimu:<br><br><span>dalikliai = 0<br>for i in range(1, n + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dalikliai += 1</span><br><br>Po ciklo belieka su <span>if</span> patikrinti, ar daliklių kiekis lygus 2, ir išvesti atitinkamą tekstą.",
-        "tags": [
-            {
-                "name": "Sudėtingas",
-                "color": "Red"
-            }
-        ],
-        "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
-        "tests": [
-            {
-                "input": ["7"],
-                "output": ["Taip"]
-            },
-            {
-                "input": ["4"],
-                "output": ["Ne"]
-            },
-            {
-                "input": ["1"],
-                "output": ["Ne"]
-            }
-        ]
-    }
+            "id": "tutUzd4",
+            "name": "Didžiausias iš trijų",
+            "desc": "Sąlygos sakinių (if-elif-else) taikymas ieškant maksimumo.",
+            "task": "Duoti trys sveikieji skaičiai: a, b ir c. Parašykite programą, kuri nustatytų ir išvestų patį didžiausią skaičių. Visi skaičiai gali būti skirtingi arba vienodi.<br><br>Naudokite komandas <span>if</span>, <span>elif</span> ir <span>else</span> sąlygų tikrinimui bei palyginimo operatorių <span>&gt;</span> (daugiau).<hr>Kai turime daugiau nei dvi pasirinkimo šakas, naudojame <span>elif</span> (sutrumpinta iš else if). Programa tikrina sąlygas iš viršaus į apačią ir įvykdo tik tą bloką, kurio sąlygą randa pirmą teisingą.<br><br>Pavyzdys:<br><br><span>if a &gt; b and a &gt; c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(a)<br>elif b &gt; c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(b)<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(c)</span>",
+            "tags": [
+                {
+                    "name": "Vidutinis",
+                    "color": "Orange"
+                }
+            ],
+            "startCode": "a = int(input())\nb = int(input())\nc = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["5", "12", "2"],
+                    "output": ["12"]
+                },
+                {
+                    "input": ["9", "9", "3"],
+                    "output": ["9"]
+                },
+                {
+                    "input": ["-1", "-5", "-3"],
+                    "output": ["-1"]
+                }
+            ],
+            "answer": "a = int(input())<br>b = int(input())<br>c = int(input())<br><br>if a >= b and a >= c:<br>    print(a)<br>elif b >= a and b >= c:<br>    print(b)<br>else:<br>    print(c)"
+        },
+        {
+            "id": "tutUzd5",
+            "name": "Skaičių sekos sumavimas",
+            "desc": "Ciklų (for/while) valdymas ir kintamųjų kaupimas.",
+            "task": "Duotas teigiamas sveikasis skaičius n. Parašykite programą, kuri apskaičiuotų ir išvestų visų natūraliųjų skaičių sumą nuo 1 iki n (įskaitant ir n).<br><br>Naudokite ciklą <span>for</span> kartu su funkcija <span>range()</span>.<hr>Norint susumuoti reikšmes, prieš ciklą sukuriame kintamąjį (pvz., <span>suma = 0</span>). Ciklo viduje prie šio kintamojo nuolat pridedame einamąjį skaičių naudodami operatorių <span>+=</span>. Atminkite, kad <span>range(nuo, iki)</span> neįtraukia pabaigos skaičiaus, todėl norint skaičiuoti iki n, reikia naudoti n + 1.<br><br>Pavyzdys:<br><br><span>suma = 0<br>for i in range(1, n + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;suma += i<br>print(suma)</span>",
+            "tags": [
+                {
+                    "name": "Sudėtingas",
+                    "color": "Red"
+                }
+            ],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["5"],
+                    "output": ["15"]
+                },
+                {
+                    "input": ["1"],
+                    "output": ["1"]
+                },
+                {
+                    "input": ["100"],
+                    "output": ["5050"]
+                }
+            ],
+            "answer": "n = int(input())<br><br>suma = 0<br>for i in range(1, n + 1):<br>    suma += i<br><br>print(suma)"
+        },
+        {
+            "id": "tutUzd6",
+            "name": "Pirminis skaičius",
+            "desc": "Sudėtingesnė logika su ciklais ir liekanų tikrinimu.",
+            "task": "Sveikasis skaičius n yra vadinamas pirminiu, jei jis dalijasi tik iš savęs ir iš 1. Skaičius 1 nėra pirminis. Parašykite programą, kuri patikrintų, ar duotas skaičius n (n &gt; 0) yra pirminis. Jei pirminis, išveskite 'Taip', jei ne – 'Ne'.<br><br>Naudokite kintamąjį-vėliavėlę (boolean) arba daliklių skaičiavimą.<hr>Logiką galima sukurti skaičiuojant, kiek daliklių turi skaičius intervale nuo 1 iki n. Jei daliklių skaičius lygus tiksliai 2 (skaičius dalijasi tik iš 1 ir savęs), vadinasi jis pirminis. Dalijimąsi be liekanos tikriname su <span>% == 0</span>.<br><br>Pavyzdys su daliklių skaičiavimu:<br><br><span>dalikliai = 0<br>for i in range(1, n + 1):<br>&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dalikliai += 1</span><br><br>Po ciklo belieka su <span>if</span> patikrinti, ar daliklių kiekis lygus 2, ir išvesti atitinkamą tekstą.",
+            "tags": [
+                {
+                    "name": "Sudėtingas",
+                    "color": "Red"
+                }
+            ],
+            "startCode": "n = int(input())\n\n# Tavo kodas eina čia:\n\n",
+            "tests": [
+                {
+                    "input": ["7"],
+                    "output": ["Taip"]
+                },
+                {
+                    "input": ["4"],
+                    "output": ["Ne"]
+                },
+                {
+                    "input": ["1"],
+                    "output": ["Ne"]
+                }
+            ],
+            "answer": "n = int(input())<br><br>dalikliai = 0<br>for i in range(1, n + 1):<br>    if n % i == 0:<br>        dalikliai += 1<br><br>if dalikliai == 2:<br>    print(\"Taip\")<br>else:<br>    print(\"Ne\")"
+        }
     ],
 
     "basicTasks": [
@@ -196,7 +202,8 @@
                         "198"
                     ]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\nm = int(input())\n\nk = n * m\nprint(k)"
         },
         {
             "id":"btUzd2",
@@ -233,7 +240,8 @@
                         "Valandos: 240 Minutės: 14400"
                     ]
                 }
-            ]
+            ],
+            "answer": "p = int(input())\n\nvalandos = p * 24\nminutes = valandos * 60\n\nprint(f\"Valandos: {valandos} Minutės: {minutes}\")"
         },
         {
             "id":"btUzd3",
@@ -270,7 +278,8 @@
                         "Mėnesiai: 0 Dienos: 0 Valandos: 0"
                     ]
                 }
-            ]
+            ],
+            "answer": "m = int(input())\n\nmenesiai = m * 12\ndienos = m * 365\nvalandos = dienos * 24\n\nprint(f\"Mėnesiai: {menesiai} Dienos: {dienos} Valandos: {valandos}\")"
         },
         {
             "id":"btUzd4",
@@ -307,7 +316,8 @@
                         "6"
                     ]
                 }
-            ]
+            ],
+            "answer": "x = int(input())\n\ny = x**2 + 2\nprint(y)"
         },
         {
             "id":"btUzd5",
@@ -347,7 +357,8 @@
                         "0.5"
                     ]
                 }
-            ]
+            ],
+            "answer": "m = float(input())\ns = float(input())\n\nkaina_kg = s / m\nkaina_100g = kaina_kg * 0.1\n\nprint(round(kaina_100g, 2))"
         },
         {
             "id":"btPaUzd1",
@@ -384,7 +395,8 @@
                         "4"
                     ]
                 }
-            ]
+            ],
+            "answer": "b = int(input())\n\narunas = b\naudrius = b + 2\narvydas = b - 4\nvytautas = audrius\ngintaras = arvydas * 2\n\nviso = arunas + audrius + arvydas + vytautas + gintaras\nprint(viso)"
         },
         {
             "id":"btPaUzd2",
@@ -405,8 +417,27 @@
                     "output": [
                         "201"
                     ]
+                },
+                {
+                    "input": [
+                        "5",
+                        "3"
+                    ],
+                    "output": [
+                        "50"
+                    ]
+                },
+                {
+                    "input": [
+                        "7",
+                        "7"
+                    ],
+                    "output": [
+                        "0"
+                    ]
                 }
-            ]
+            ],
+            "answer": "r1 = int(input())\nr2 = int(input())\npi = 3.14\n\ns = pi * (r1**2 - r2**2)\n\nprint(round(s))"
         }
     ],
 
@@ -434,7 +465,8 @@
                     "input": ["5.00", "10"],
                     "output": ["50.0"]
                 }
-            ]
+            ],
+            "answer": "s = float(input())\nn = int(input())\n\nkaina = s * n\nif n > 10:\n    kaina = kaina * 0.85\n\nprint(round(kaina, 2))"
         },
         {
             "id": "ntUzd2",
@@ -459,7 +491,8 @@
                     "input": ["999"],
                     "output": ["27"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\n\ns1 = n // 100\ns2 = (n // 10) % 10\ns3 = n % 10\n\nsuma = s1 + s2 + s3\nprint(suma)"
         },
         {
             "id": "ntUzd3",
@@ -485,7 +518,8 @@
                     "input": ["45"],
                     "output": ["0 val. ir 45 min."]
                 }
-            ]
+            ],
+            "answer": "m = int(input())\n\nval = m // 60\nmin = m % 60\n\nprint(f\"{val} val. ir {min} min.\")"
         },
         {
             "id": "ntUzd4",
@@ -511,7 +545,8 @@
                     "input": ["100", "10"],
                     "output": ["Dėžės: 10 Likutis: 0"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\nk = int(input())\n\ndezes = n // k\nlikutis = n % k\n\nprint(f\"Dėžės: {dezes} Likutis: {likutis}\")"
         },
         {
             "id": "ntUzd5",
@@ -541,7 +576,8 @@
                     "input": ["11"],
                     "output": ["Ruduo"]
                 }
-            ]
+            ],
+            "answer": "m = int(input())\n\nif m == 12 or m == 1 or m == 2:\n    print(\"Žiema\")\nelif m >= 3 and m <= 5:\n    print(\"Pavasaris\")\nelif m >= 6 and m <= 8:\n    print(\"Vasara\")\nelse:\n    print(\"Ruduo\")"
         }
     ],
 
@@ -569,7 +605,8 @@
                     "input": ["10"],
                     "output": ["29"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\n\nradom = 0\nskaicius = 1\n\nwhile radom < n:\n    skaicius += 1\n    dalikliai = 0\n    for i in range(1, skaicius + 1):\n        if skaicius % i == 0:\n            dalikliai += 1\n    if dalikliai == 2:\n        radom += 1\n\nprint(skaicius)"
         },
         {
             "id": "htUzd2",
@@ -594,7 +631,8 @@
                     "input": ["400"],
                     "output": ["400"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\n\nskaitmenys = list(str(n))\nskaitmenys.sort(reverse=True)\ndidziausias = int(\"\".join(skaitmenys))\n\nprint(didziausias)"
         },
         {
             "id": "htUzd3",
@@ -619,7 +657,8 @@
                     "input": ["50"],
                     "output": ["1"]
                 }
-            ]
+            ],
+            "answer": "g = int(input())\n\nmonetos = [50, 20, 10, 5, 2, 1]\nkiekis = 0\n\nfor moneta in monetos:\n    kiekis += g // moneta\n    g = g % moneta\n\nprint(kiekis)"
         },
         {
             "id": "htUzd4",
@@ -644,13 +683,14 @@
                     "input": ["1234"],
                     "output": ["NE"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\n\ntekstas = str(n)\napverstas = tekstas[::-1]\n\nif tekstas == apverstas:\n    print(\"TAIP\")\nelse:\n    print(\"NE\")"
         },
         {
             "id": "htUzd5",
             "name": "Fibonačio skaičiai",
             "desc": "Apskaičiuokite n-tąjį Fibonačio sekos narį.",
-            "task": "Fibonačio seka prasideda skaičiais 0 ir 1, o kiekvienas kitas sekos narys yra lygus dviejų prieš jį einančių narių sumai (0, 1, 1, 2, 3, 5, 8, 13...).<br><br>Parašykite programą, kuri surastų ir išvestų <span>n</span>-tąjį Fibonačio sekos narį, kai sekos pradžia laikomas 0 narys (<span>n = 0</span> -> 0, <span>n = 1</span> -> 1, <span>n = 6</span> -> 8).",
+            "task": "Fibonačio seka prasideda skaičiais 0 i 1, o kiekvienas kitas sekos narys yra lygus dviejų prieš jį einančių narių sumai (0, 1, 1, 2, 3, 5, 8, 13...).<br><br>Parašykite programą, kuri surastų ir išvestų <span>n</span>-tąjį Fibonačio sekos narį, kai sekos pradžia laikomas 0 narys (<span>n = 0</span> -> 0, <span>n = 1</span> -> 1, <span>n = 6</span> -> 8).",
             "tags": [{
                 "name": "Sunkus",
                 "color": "Red"
@@ -669,7 +709,8 @@
                     "input": ["6"],
                     "output": ["8"]
                 }
-            ]
+            ],
+            "answer": "n = int(input())\n\nif n == 0:\n    print(0)\nelif n == 1:\n    print(1)\nelse:\n    a = 0\n    b = 1\n    for i in range(2, n + 1):\n        c = a + b\n        a = b\n        b = c\n    print(b)"
         }
     ]
 }

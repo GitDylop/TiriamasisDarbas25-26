@@ -33,9 +33,10 @@ const taskSchema = {
                 },
                 required: ["input", "output"]
             }
-        }
+        },
+        answer: { type: Type.STRING, description: "A full working code for the task, not a snippet - full. The one you can paste anywhere and everything's there." }
     },
-    required: ["name", "desc", "task", "tags", "startCode", "tests"]
+    required: ["name", "desc", "task", "tags", "startCode", "tests", "answer"]
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -52,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
             createBtn.innerText = "Kuriama...";
             createBtn.disabled = true;
 
-            const prompt = `Generate a brand new Python programming assignment for programming students in Lithuanian language. No external libraries are allowed! 
+            const prompt = `Generate a brand new Python programming assignment for programming students in Lithuanian language. No external libraries are allowed! For input you use input() and leave it empty and for output you use print, no additional funtions required! 
             Topic: ${topicText}
             Difficulty level target: ${selectedDifficulty}`;
 
             try {
                 const response = await ai.models.generateContent({
-                    model: 'gemini-3-flash-preview',
+                    model: 'gemini-3.1-flash-lite',
                     contents: prompt,
                     config: {
                         responseMimeType: "application/json",
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const localTasks = JSON.parse(localStorage.getItem('tasks')) || [];
                 const nextIdNumber = localTasks.length + 1;
-                newTask.id = `tutUzd${nextIdNumber}`;
+                newTask.id = `geminiUzd${nextIdNumber}`;
 
                 localTasks.push(newTask);
                 localStorage.setItem('tasks', JSON.stringify(localTasks));
@@ -89,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } catch (error) {
                 console.error("Gemini Generation Error:", error);
-                alert("Nepavyko susisiekti su dirbtiniu intelektu.");
+                alert("Nepavyko susisiekti su dirbtiniu intelektu. Bandykite dar kartą.");
             } finally {
                 createBtn.innerText = "Sukurti";
                 createBtn.disabled = false;

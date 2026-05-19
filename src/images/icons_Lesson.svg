@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        opacity: .9;
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-12 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-13 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-14 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-15 {
+        opacity: .8;
+      }
+
+      .cls-16 {
+        opacity: .6;
+      }
+
+      .cls-17 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="38" width="256" height="180" rx="20.02" ry="20.02"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="-5" y="33" width="266" height="190"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="cls-1" x="10" y="48" width="118" height="160" rx="10.11" ry="10.11"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-1" x="5" y="43" width="128" height="170"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="cls-1" x="128" y="48" width="118" height="160" rx="10.11" ry="10.11"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="cls-1" x="123" y="43" width="128" height="170"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="47.96" y1="48.84" x2="90.04" y2="90.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="47.96" y1="95.34" x2="90.04" y2="137.41" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" y1="72.09" y2="114.16" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" y1="118.59" x2="90.04" y2="160.66" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="47.96" y1="165.09" x2="90.04" y2="207.16" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" y1="141.84" y2="183.91" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="165.96" y1="165.09" x2="208.04" y2="207.16" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="165.96" y1="141.84" x2="208.04" y2="183.91" xlink:href="#linear-gradient"/>
+    <image id="image" width="268" height="355" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAFjCAYAAADILjUcAAAACXBIWXMAABcRAAAXEQHKJvM/AAAES0lEQVR4nO3UwQmAQBDAQNf+e15LMI8DEWYqyCuzu3sBvJiZub+OAP7DMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMIDMMACA8x6s5AbE0+PjHwAAAABJRU5ErkJggg=="/>
+  </defs>
+  <g class="cls-16">
+    <g class="cls-17">
+      <g class="cls-2">
+        <image width="556" height="397" transform="translate(-5.44 32.64) scale(.48)" xlink:href="data:image/png;base64,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"/>
+      </g>
+    </g>
+  </g>
+  <g class="cls-15">
+    <g class="cls-5">
+      <g class="cls-3">
+        <use transform="translate(4.64 42.72) scale(.48)" xlink:href="#image"/>
+      </g>
+    </g>
+  </g>
+  <g class="cls-15">
+    <g class="cls-4">
+      <g class="cls-6">
+        <use transform="translate(122.72 42.72) scale(.48)" xlink:href="#image"/>
+      </g>
+    </g>
+  </g>
+  <rect class="cls-7" x="29" y="64.88" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-8" x="29" y="111.38" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-9" x="29" y="88.13" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-10" x="29" y="134.62" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-13" x="29" y="181.12" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-11" x="29" y="157.87" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-12" x="147" y="181.12" width="80" height="10" rx="5" ry="5"/>
+  <rect class="cls-14" x="147" y="157.87" width="80" height="10" rx="5" ry="5"/>
+</svg>

@@ -9,7 +9,7 @@ async function initPython() {
 
 async function loadJSON() {
     const pathSegments = window.location.pathname.split('/');
-    const isSubfolder = pathSegments.length > 3 || window.location.pathname.includes('/pamokos/');
+    const isSubfolder = pathSegments.length > 2 || window.location.pathname.includes('/pamokos/');
     const prefix = isSubfolder ? '../' : '';
     
     const data = await fetch(`${prefix}src/data/tasks.json`);
@@ -47,6 +47,9 @@ async function loadTaskList(list) {
     tasks.forEach(task => {
         let tagElementsString = '';
 
+        const completedList = JSON.parse(localStorage.getItem('completedTasks')) || [];
+        const isDone = completedList.includes(task.id);
+
         if (task.tags && Array.isArray(task.tags)) {
             task.tags.forEach(tag => {
                 tagElementsString += `<div class="tag" color="${tag.color}">${tag.name}</div>`;
@@ -57,7 +60,7 @@ async function loadTaskList(list) {
             <a class="list-item" href="${list}/uzduotis.html?list=${list}&task=${task.id}">
                 <p class="list-item-title">${task.name}</p>
                 <p class="list-item-description">${task.desc}</p>
-                <p class="list-item-progress" progress="">Neatlikta</p>
+                <p class="list-item-progress" progress="${isDone ? "DONE" : ""}">${isDone ? "Atlikta" : "Neatlikta"}</p>
                 <div class="list-item-taglist">
                     ${tagElementsString}
                 </div>
@@ -105,13 +108,31 @@ async function loadTask() {
 
     testData = uzduotis.tests;
 
+
     const taskElement = document.getElementById('task');
+    const answerElement = document.getElementById('answer');
+    const testsElement = document.getElementById('tests');
     const codeElement = document.getElementById('code');
     const nameElement = document.getElementById('task-name');
 
+
+    testData.forEach((test, index) => {
+
+        const testsHTML = `
+        <div class="testDisplay">
+            <b>Testas nr. ${index + 1}</b>Įvestys: <span>[${test.input}]</span>, Tikimasi rezultato: <span>[${test.output}]</span>
+        </div>
+        `
+        
+        testsElement.innerHTML += testsHTML;
+    });
+
     taskElement.innerHTML = uzduotis.task;
     codeElement.innerText = uzduotis.startCode;
+    answerElement.innerHTML = `<span>${uzduotis.answer}</span>`;
     nameElement.innerText = uzduotis.name;
+
+    console.log(testData);
 }
 
 window.deleteTask = function(event, taskId) {
@@ -216,7 +237,17 @@ async function submitPython() {
     }
 
     if (totalPassed === testData.length) {
-        outputEl.innerHTML += `<br><div style="color: green;">Užduotis atlikta</div>`;
+        outputEl.innerHTML += '<br><div style="color: green;">Užduotis atlikta</div>';
+        
+        const completedTasks = JSON.parse(localStorage.getItem('completedTasks')) || [];
+
+        const currentUrlParams = new URLSearchParams(window.location.search);
+        const activeTaskId = currentUrlParams.get('task');
+
+        if (activeTaskId && !completedTasks.includes(activeTaskId)) {
+            completedTasks.push(activeTaskId);
+            localStorage.setItem('completedTasks', JSON.stringify(completedTasks));
+        }
     }
 }
 
@@ -225,6 +256,17 @@ initPython();
 function switchTab(self, parentId) {
     const parent = document.getElementById(parentId);
     const children = parent.querySelector('.f-tab[active]');
+    children.toggleAttribute('active');
+    self.toggleAttribute('active');
+}
+
+function switchPanelTab(self, parentId, panel) {
+    const parent = document.getElementById(parentId);
+    const children = parent.querySelector('.tab[active]');
+    const currentPanel = parent.querySelector('.panel[active]');
+    const newPanel = document.getElementById(panel);
+    currentPanel.toggleAttribute('active');
+    newPanel.toggleAttribute('active');
     children.toggleAttribute('active');
     self.toggleAttribute('active');
 }

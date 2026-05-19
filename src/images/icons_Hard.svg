@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-1" cx="80" cy="169.77" r="40"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="35" y="124.77" width="90" height="90"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <circle class="cls-1" cx="176" cy="169.77" r="40"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-1" x="131" y="124.77" width="90" height="90"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <circle class="cls-1" cx="128" cy="86.23" r="40"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="cls-1" x="83" y="41.23" width="90" height="90"/>
+    </clipPath>
+    <image id="image" width="188" height="189" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAC8CAYAAADCScSrAAAACXBIWXMAABcRAAAXEQHKJvM/AAACC0lEQVR4nO3SMQEAIAzAMMC/5+ECjiYKenTPzCyIOL8D4CXDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4Ui4dMgV0mCO0lQAAAABJRU5ErkJggg=="/>
+  </defs>
+  <g class="cls-7">
+    <g class="cls-2">
+      <use transform="translate(34.88 124.32) scale(.48)" xlink:href="#image"/>
+    </g>
+  </g>
+  <g class="cls-5">
+    <g class="cls-3">
+      <use transform="translate(130.88 124.32) scale(.48)" xlink:href="#image"/>
+    </g>
+  </g>
+  <g class="cls-4">
+    <g class="cls-6">
+      <image width="188" height="189" transform="translate(82.88 40.8) scale(.48)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAC9CAYAAAAJFRcOAAAACXBIWXMAABcRAAAXEQHKJvM/AAACDklEQVR4nO3SMQEAIAzAMMC/5+ECjiYKenTPzCyIOL8D4CXDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPiuFJMTwphifF8KQYnhTDk2J4UgxPygUuOAV2mlbEPAAAAABJRU5ErkJggg=="/>
+    </g>
+  </g>
+</svg>
