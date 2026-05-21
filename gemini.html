@@ -16,13 +16,31 @@
         </div>
         <div id="gemini-panel">
             <h1>Sukurti naują užduotį</h1>
-            <div class="floating-tab-island" id="island">
-                <div class="f-tab" active onclick="switchTab(this, 'island')">Lengva</div>
-                <div class="f-tab" onclick="switchTab(this, 'island')">Vidutinė</div>
-                <div class="f-tab" onclick="switchTab(this, 'island')">Sunki</div>
+            <div class="floating-tab-island" id="islandDiff">
+                <div class="f-tab" onclick="switchTab(this, 'islandDiff')">Pamoka</div>
+                <div class="f-tab" active onclick="switchTab(this, 'islandDiff')">Lengva</div>
+                <div class="f-tab" onclick="switchTab(this, 'islandDiff')">Vidutinė</div>
+                <div class="f-tab" onclick="switchTab(this, 'islandDiff')">Sunki</div>
             </div>
-            <div class="collapsed-menu" id="cm">
-                <div class="cm-header" onclick="collapse('cm')">Papildomi nustatymai<img src="./src/images/DropDownArrowDark.svg"></div>
+            <div class="collapsed-menu" id="cm_theme">
+                <div class="cm-header" onclick="collapse('cm_theme')">Temos<img src="./src/images/DropDownArrowDark.svg"></div>
+                <div class="cm-content">
+                    <div class="floating-tab-island" id="islandTheme" column>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')" active default>-- Atsitiktinis --</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Kintamieji</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Įvestis/Išvestis</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Sąlygos</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Ciklai</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Duomenų tipai</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Masyvai ir Sąrašai</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Teksto apdorojimas</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Funkcijos</div>
+                        <div class="f-tab" onclick="switchTab(this, 'islandTheme')">Klasės</div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapsed-menu" id="cm_ddd" collapsed>
+                <div class="cm-header" onclick="collapse('cm_ddd')">Papildomi nustatymai<img src="./src/images/DropDownArrowDark.svg"></div>
                 <div class="cm-content">
                     <textarea name="" id="gemini-request-area" placeholder="Apie ką norėtumėtę užduoties"></textarea>
                 </div>

@@ -45,17 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (createBtn) {
         createBtn.addEventListener("click", async () => {
-            const topicText = requestArea ? requestArea.value.trim() : "";
+            const activeTTab = document.getElementById('islandTheme').querySelector(".f-tab[active]");
+            const topicText = activeTTab ? activeTTab.innerText.trim() : "Random";
 
-            const activeTab = document.querySelector(".f-tab[active]");
-            const selectedDifficulty = activeTab ? activeTab.innerText.trim() : "Lengvas";
+            const additionalText = requestArea ? requestArea.value.trim() : "";
+
+            const activeDTab = document.getElementById('islandDiff').querySelector(".f-tab[active]");
+            const selectedDifficulty = activeDTab ? activeDTab.innerText.trim() : "Lengvas";
 
             createBtn.innerText = "Kuriama...";
             createBtn.disabled = true;
 
-            const prompt = `Generate a brand new Python programming assignment for programming students in Lithuanian language. No external libraries are allowed! For input you use input() and leave it empty and for output you use print, no additional funtions required! 
+            const prompt = `Generate a brand new Python programming assignment for programming students in Lithuanian language. No external libraries are allowed! For input you use input() and leave it empty and for output you use print, no additional funtions required! If there's a theme it should get a second tag with the tag's name being the theme (Random is not a theme). 'Pamokos' should carefully describe how to solve the task and which functions to use. Easy questions should only use input/output, variables and basic conditions; Hard are all in but still duable for intermediate programmer. Medium is something in between. Easy, Medium and Hard questions do not require explanation on which funtions to use.
             Topic: ${topicText}
-            Difficulty level target: ${selectedDifficulty}`;
+            Difficulty level target: ${selectedDifficulty}
+            Additional settings: ${additionalText}`;
 
             try {
                 const response = await ai.models.generateContent({
