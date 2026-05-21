@@ -64,7 +64,7 @@ async function loadTaskList(list) {
                 <div class="list-item-taglist">
                     ${tagElementsString}
                 </div>
-                ${list === 'gemini' ? `<div class="gemini-delete" onclick="deleteTask(event, '${task.id}')">Delete</div>` : ''}
+                ${list === 'gemini' ? `<div class="gemini-delete" onclick="deleteTask(event, '${task.id}')">Ištrinti</div>` : ''}
             </a>
         `;
 
