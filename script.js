@@ -163,7 +163,7 @@ async function runPython() {
     const output = document.getElementById("output");
 
     pyodide.setStdout({
-        batched: (str) => { output.innerText += str + "\n"; }
+        batched: (str) => { output.innerText += "\n" + str + "\n"; }
     });
 
     pyodide.setStdin({
